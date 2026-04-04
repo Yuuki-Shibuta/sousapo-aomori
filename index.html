@@ -266,15 +266,29 @@
         }
 
         .illust-placeholder {
-            width: 180px;
-            height: 180px;
-            background: var(--bg-cream);
-            border-radius: 50%;
+            width: 200px;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
             margin: 0 auto;
+        }
+
+        .illust-placeholder svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-illust {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+
+        .worry-illust {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 16px;
         }
 
         /* ===== お悩み ===== */
@@ -352,8 +366,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4rem;
             flex-shrink: 0;
+        }
+
+        .service-icon svg {
+            width: 30px;
+            height: 30px;
         }
 
         .service-item h4 {
@@ -710,7 +728,27 @@
 <!-- ヒーロー -->
 <section class="hero">
     <div class="container fade-in">
-        <div class="hero-icon">📋</div>
+        <div class="hero-illust">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- 家のシルエット -->
+                <path d="M60 15L20 50V105H50V75H70V105H100V50L60 15Z" fill="#f5efe7" stroke="#5c4a3a" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M60 15L20 50" stroke="#5c4a3a" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M60 15L100 50" stroke="#5c4a3a" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- 窓 -->
+                <rect x="35" y="58" width="16" height="14" rx="2" fill="#e8824a" opacity="0.3" stroke="#5c4a3a" stroke-width="1.5"/>
+                <rect x="69" y="58" width="16" height="14" rx="2" fill="#e8824a" opacity="0.3" stroke="#5c4a3a" stroke-width="1.5"/>
+                <!-- ドア -->
+                <rect x="50" y="75" width="20" height="30" rx="2" fill="#e8824a" opacity="0.2" stroke="#5c4a3a" stroke-width="1.5"/>
+                <circle cx="66" cy="92" r="2" fill="#5c4a3a"/>
+                <!-- ハートマーク -->
+                <path d="M52 35C52 30 57 28 60 32C63 28 68 30 68 35C68 42 60 48 60 48C60 48 52 42 52 35Z" fill="#e8824a" opacity="0.6"/>
+                <!-- 書類 -->
+                <rect x="85" y="8" width="28" height="35" rx="3" fill="white" stroke="#5c4a3a" stroke-width="1.5" transform="rotate(10 85 8)"/>
+                <line x1="92" y1="18" x2="108" y2="15" stroke="#9b8b7a" stroke-width="1" transform="rotate(10 92 18)"/>
+                <line x1="92" y1="24" x2="106" y2="21" stroke="#9b8b7a" stroke-width="1" transform="rotate(10 92 24)"/>
+                <line x1="92" y1="30" x2="103" y2="27" stroke="#9b8b7a" stroke-width="1" transform="rotate(10 92 30)"/>
+            </svg>
+        </div>
         <h1>相続サポートセンター青森</h1>
         <div class="brand-name">そうさぽ青森</div>
         <p class="tagline">相続・終活のお悩み、まるごとサポート</p>
@@ -736,7 +774,55 @@
                     </p>
                 </div>
                 <div class="about-illust">
-                    <div class="illust-placeholder">👥</div>
+                    <div class="illust-placeholder">
+                        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 背景の丸 -->
+                            <circle cx="100" cy="100" r="95" fill="#f5efe7"/>
+                            <!-- テーブル -->
+                            <rect x="40" y="120" width="120" height="8" rx="4" fill="#d4c4b0"/>
+                            <rect x="55" y="128" width="8" height="30" rx="2" fill="#c4b4a0"/>
+                            <rect x="137" y="128" width="8" height="30" rx="2" fill="#c4b4a0"/>
+                            <!-- 書類（テーブルの上） -->
+                            <rect x="70" y="108" width="25" height="16" rx="2" fill="white" stroke="#5c4a3a" stroke-width="1.2"/>
+                            <line x1="74" y1="113" x2="91" y2="113" stroke="#9b8b7a" stroke-width="0.8"/>
+                            <line x1="74" y1="117" x2="88" y2="117" stroke="#9b8b7a" stroke-width="0.8"/>
+                            <rect x="100" y="106" width="25" height="16" rx="2" fill="white" stroke="#5c4a3a" stroke-width="1.2"/>
+                            <line x1="104" y1="111" x2="121" y2="111" stroke="#9b8b7a" stroke-width="0.8"/>
+                            <line x1="104" y1="115" x2="118" y2="115" stroke="#9b8b7a" stroke-width="0.8"/>
+                            <!-- 左の人（相談者：年配の夫婦） -->
+                            <!-- 人物1 -->
+                            <circle cx="52" cy="80" r="12" fill="#f5dcc4" stroke="#5c4a3a" stroke-width="1.5"/>
+                            <path d="M52 68C46 68 42 73 42 77C42 72 46 69 52 69C58 69 62 72 62 77C62 73 58 68 52 68Z" fill="#8b7355"/>
+                            <circle cx="48" cy="80" r="1.5" fill="#5c4a3a"/>
+                            <circle cx="56" cy="80" r="1.5" fill="#5c4a3a"/>
+                            <path d="M48 85C48 85 50 88 52 88C54 88 56 85 56 85" stroke="#5c4a3a" stroke-width="1" stroke-linecap="round" fill="none"/>
+                            <path d="M38 95C38 95 42 92 52 92C62 92 66 95 66 95L66 120H38V95Z" fill="#7baa6e" stroke="#5c4a3a" stroke-width="1.2"/>
+                            <!-- 人物2（奥さん） -->
+                            <circle cx="28" cy="84" r="10" fill="#f5dcc4" stroke="#5c4a3a" stroke-width="1.5"/>
+                            <path d="M28 74C22 74 18 78 19 82C19 76 23 75 28 75C33 75 37 76 37 82C38 78 34 74 28 74Z" fill="#5c4a3a"/>
+                            <circle cx="25" cy="84" r="1.2" fill="#5c4a3a"/>
+                            <circle cx="31" cy="84" r="1.2" fill="#5c4a3a"/>
+                            <path d="M25 88C25 88 27 90 28 90C29 90 31 88 31 88" stroke="#5c4a3a" stroke-width="0.8" stroke-linecap="round" fill="none"/>
+                            <path d="M18 98C18 98 22 95 28 95C34 95 38 98 38 98L38 120H18V98Z" fill="#e8824a" opacity="0.7" stroke="#5c4a3a" stroke-width="1.2"/>
+                            <!-- 右の人（専門家） -->
+                            <circle cx="155" cy="78" r="13" fill="#f5dcc4" stroke="#5c4a3a" stroke-width="1.5"/>
+                            <path d="M155 65C148 65 143 70 143 75C143 69 148 66 155 66C162 66 167 69 167 75C167 70 162 65 155 65Z" fill="#3d3028"/>
+                            <circle cx="151" cy="78" r="1.5" fill="#5c4a3a"/>
+                            <circle cx="159" cy="78" r="1.5" fill="#5c4a3a"/>
+                            <path d="M151 83C151 83 153 86 155 86C157 86 159 83 159 83" stroke="#5c4a3a" stroke-width="1" stroke-linecap="round" fill="none"/>
+                            <!-- メガネ -->
+                            <circle cx="151" cy="78" r="4" stroke="#5c4a3a" stroke-width="0.8" fill="none"/>
+                            <circle cx="159" cy="78" r="4" stroke="#5c4a3a" stroke-width="0.8" fill="none"/>
+                            <line x1="155" y1="78" x2="155" y2="78" stroke="#5c4a3a" stroke-width="0.8"/>
+                            <path d="M140 95C140 95 145 91 155 91C165 91 170 95 170 95L170 120H140V95Z" fill="#4a7a9b" stroke="#5c4a3a" stroke-width="1.2"/>
+                            <!-- ネクタイ -->
+                            <path d="M155 95L152 105L155 120L158 105L155 95Z" fill="#e8824a" opacity="0.6"/>
+                            <!-- 吹き出し（専門家から） -->
+                            <path d="M130 50C130 40 140 35 155 35C170 35 180 40 180 50C180 60 170 65 155 65C150 65 140 63 138 67L140 60C134 58 130 55 130 50Z" fill="white" stroke="#5c4a3a" stroke-width="1.2"/>
+                            <text x="148" y="48" font-size="8" fill="#5c4a3a" font-family="sans-serif">安心</text>
+                            <text x="145" y="58" font-size="7" fill="#9b8b7a" font-family="sans-serif">サポート</text>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -752,10 +838,16 @@
         </div>
         <div class="worry-cards">
             <div class="worry-card fade-in">
+                <div class="worry-illust">
+                    <svg viewBox="0 0 60 60" fill="none"><rect x="12" y="8" width="28" height="36" rx="3" fill="white" stroke="#5c4a3a" stroke-width="1.8"/><line x1="17" y1="16" x2="35" y2="16" stroke="#e8824a" stroke-width="1.2"/><line x1="17" y1="21" x2="35" y2="21" stroke="#9b8b7a" stroke-width="0.8"/><line x1="17" y1="25.5" x2="30" y2="25.5" stroke="#9b8b7a" stroke-width="0.8"/><line x1="17" y1="30" x2="35" y2="30" stroke="#9b8b7a" stroke-width="0.8"/><circle cx="44" cy="18" r="10" fill="#fdf0e8" stroke="#e8824a" stroke-width="1.5"/><text x="41" y="22" font-size="12" fill="#e8824a" font-family="sans-serif" font-weight="bold">?</text></svg>
+                </div>
                 <h4>遺言書って作成すべきなの？</h4>
                 <p>認知症や介護になったらどうしよう<br>万一の時、頼める親族がいない<br>生前贈与はどうすればいいの？</p>
             </div>
             <div class="worry-card fade-in">
+                <div class="worry-illust">
+                    <svg viewBox="0 0 60 60" fill="none"><circle cx="20" cy="18" r="8" fill="#f5dcc4" stroke="#5c4a3a" stroke-width="1.5"/><path d="M10 34C10 30 14 28 20 28C26 28 30 30 30 34V40H10V34Z" fill="#7baa6e" opacity="0.5" stroke="#5c4a3a" stroke-width="1.2"/><circle cx="40" cy="18" r="8" fill="#f5dcc4" stroke="#5c4a3a" stroke-width="1.5"/><path d="M30 34C30 30 34 28 40 28C46 28 50 30 50 34V40H30V34Z" fill="#4a7a9b" opacity="0.4" stroke="#5c4a3a" stroke-width="1.2"/><path d="M22 44L30 48L38 44" stroke="#e8824a" stroke-width="1.5" stroke-linecap="round"/><path d="M15 50C15 50 22 53 30 53C38 53 45 50 45 50" stroke="#e8824a" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 2"/></svg>
+                </div>
                 <h4>もめないように財産を渡したい</h4>
                 <p>生命保険や医療保険も見直したい<br>家族に迷惑をかけたくない<br>何から始めればいいかわからない</p>
             </div>
@@ -772,42 +864,54 @@
         </div>
         <div class="service-list">
             <div class="service-item fade-in">
-                <div class="service-icon">📜</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 30 30" fill="none"><rect x="5" y="3" width="20" height="25" rx="2" fill="white" stroke="#5c4a3a" stroke-width="1.5"/><line x1="9" y1="9" x2="21" y2="9" stroke="#e8824a" stroke-width="1.2"/><line x1="9" y1="13" x2="21" y2="13" stroke="#9b8b7a" stroke-width="0.8"/><line x1="9" y1="16.5" x2="18" y2="16.5" stroke="#9b8b7a" stroke-width="0.8"/><line x1="9" y1="20" x2="21" y2="20" stroke="#9b8b7a" stroke-width="0.8"/><path d="M17 23L19 25L23 21" stroke="#7baa6e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
                 <div>
                     <h4>遺言書の作成サポート</h4>
                     <p>公正証書遺言・自筆証書遺言の作成をお手伝いします</p>
                 </div>
             </div>
             <div class="service-item fade-in">
-                <div class="service-icon">📝</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 30 30" fill="none"><rect x="3" y="5" width="17" height="22" rx="2" fill="white" stroke="#5c4a3a" stroke-width="1.5"/><rect x="10" y="3" width="17" height="22" rx="2" fill="white" stroke="#5c4a3a" stroke-width="1.5"/><line x1="14" y1="9" x2="23" y2="9" stroke="#9b8b7a" stroke-width="0.8"/><line x1="14" y1="12.5" x2="23" y2="12.5" stroke="#9b8b7a" stroke-width="0.8"/><line x1="14" y1="16" x2="21" y2="16" stroke="#9b8b7a" stroke-width="0.8"/><path d="M14 20L16 22L21 19" stroke="#e8824a" stroke-width="1.2" stroke-linecap="round"/></svg>
+                </div>
                 <div>
                     <h4>遺産分割協議書の作成</h4>
                     <p>相続人間の話し合いの結果を法的に有効な書面にまとめます</p>
                 </div>
             </div>
             <div class="service-item fade-in">
-                <div class="service-icon">🛡️</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 30 30" fill="none"><path d="M15 5L5 10V17C5 22 9 26.5 15 28C21 26.5 25 22 25 17V10L15 5Z" fill="white" stroke="#5c4a3a" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 16L13 19L20 12" stroke="#7baa6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
                 <div>
                     <h4>認知症・介護への備え</h4>
                     <p>任意後見契約・家族信託など、将来に備えた対策をご提案します</p>
                 </div>
             </div>
             <div class="service-item fade-in">
-                <div class="service-icon">🔍</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="13" r="8" fill="white" stroke="#5c4a3a" stroke-width="1.5"/><path d="M15 5V13H22" stroke="#e8824a" stroke-width="1.5" stroke-linecap="round"/><rect x="4" y="22" width="22" height="5" rx="2" fill="white" stroke="#5c4a3a" stroke-width="1.2"/><line x1="8" y1="24.5" x2="22" y2="24.5" stroke="#9b8b7a" stroke-width="0.8"/></svg>
+                </div>
                 <div>
                     <h4>保険の見直し</h4>
                     <p>生命保険・医療保険の見直しで、ご家族の安心を守ります</p>
                 </div>
             </div>
             <div class="service-item fade-in">
-                <div class="service-icon">📂</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 30 30" fill="none"><rect x="4" y="6" width="22" height="7" rx="2" fill="white" stroke="#5c4a3a" stroke-width="1.5"/><rect x="4" y="15" width="22" height="7" rx="2" fill="white" stroke="#5c4a3a" stroke-width="1.5"/><rect x="4" y="24" width="14" height="3" rx="1" fill="#e8824a" opacity="0.4"/><line x1="8" y1="9.5" x2="22" y2="9.5" stroke="#9b8b7a" stroke-width="0.8"/><line x1="8" y1="18.5" x2="22" y2="18.5" stroke="#9b8b7a" stroke-width="0.8"/><circle cx="24" cy="24" r="4" fill="#7baa6e" opacity="0.2" stroke="#7baa6e" stroke-width="1"/><path d="M22.5 24L23.5 25L25.5 23" stroke="#7baa6e" stroke-width="0.8" stroke-linecap="round"/></svg>
+                </div>
                 <div>
                     <h4>相続手続き全般のご案内</h4>
                     <p>複雑な相続手続きをワンストップでサポートいたします</p>
                 </div>
             </div>
             <div class="service-item fade-in">
-                <div class="service-icon">🎁</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 30 30" fill="none"><path d="M8 8H22V24H8V8Z" fill="white" stroke="#5c4a3a" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 8L15 4L22 8" stroke="#5c4a3a" stroke-width="1.5" stroke-linejoin="round"/><circle cx="15" cy="14" r="4" fill="#e8824a" opacity="0.3" stroke="#5c4a3a" stroke-width="1"/><path d="M15 18V14M13 16H17" stroke="#5c4a3a" stroke-width="0.8"/><path d="M11 21H19" stroke="#9b8b7a" stroke-width="0.8"/><path d="M5 24L10 20" stroke="#e8824a" stroke-width="1.5" stroke-linecap="round"/><path d="M25 24L20 20" stroke="#e8824a" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
                 <div>
                     <h4>生前贈与の手続き</h4>
                     <p>節税対策を考慮した生前贈与のアドバイスと手続きを行います</p>
