@@ -104,46 +104,81 @@
 
         /* ===== ヒーロー ===== */
         .hero {
-            padding: 120px 0 60px;
-            text-align: center;
+            padding-top: 64px;
             background: var(--bg);
-            position: relative;
         }
 
-        .hero-icon {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
+        .hero-banner {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            background: var(--bg);
+            border-radius: 12px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            min-height: 300px;
         }
 
-        .hero h1 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--brown);
-            letter-spacing: 0.1em;
-            margin-bottom: 8px;
+        .hero-side {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 8px;
+            padding: 20px;
+            align-items: center;
+            justify-items: center;
         }
 
-        .hero .brand-name {
-            font-size: 2.4rem;
-            font-weight: 700;
-            color: var(--brown);
-            letter-spacing: 0.08em;
-            margin-bottom: 12px;
-            position: relative;
-            display: inline-block;
+        .hero-side .il {
+            width: 100%;
+            max-width: 140px;
         }
 
-        .brand-name::before,
-        .brand-name::after {
-            content: '～';
-            color: var(--primary);
-            margin: 0 8px;
+        .hero-side .il img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
         }
 
-        .hero .tagline {
-            font-size: 1rem;
+        .il-r1 { transform: rotate(-2deg); }
+        .il-r2 { transform: rotate(3deg); }
+        .il-r3 { transform: rotate(1deg); }
+        .il-r4 { transform: rotate(-3deg); }
+        .il-r5 { transform: rotate(2deg); }
+        .il-r6 { transform: rotate(-1deg); }
+        .il-r7 { transform: rotate(3deg); }
+        .il-r8 { transform: rotate(-2deg); }
+
+        .hero-text {
+            text-align: center;
+            padding: 32px 28px;
+            min-width: 280px;
+        }
+
+        .hero-text .org {
+            font-size: 0.82rem;
             color: var(--text-light);
-            margin-bottom: 32px;
+            letter-spacing: 0.12em;
+            margin-bottom: 4px;
+        }
+
+        .hero-text .brand {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--brown);
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .hero-text .brand .deco { color: var(--primary); }
+
+        .hero-text .catch {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin-bottom: 28px;
             letter-spacing: 0.08em;
         }
 
@@ -655,9 +690,17 @@
 
         /* ===== レスポンシブ ===== */
         @media (max-width: 768px) {
-            .hero { padding: 100px 0 40px; }
-            .hero .brand-name { font-size: 1.8rem; }
-            .hero h1 { font-size: 1.2rem; }
+            .hero-banner {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+            }
+            .hero-side {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr;
+                padding: 12px;
+            }
+            .hero-side .il { max-width: 80px; }
+            .hero-text .brand { font-size: 1.6rem; }
 
             .about { padding: 40px 24px; margin: 0 12px; }
             .about-grid { grid-template-columns: 1fr; }
@@ -727,32 +770,25 @@
 
 <!-- ヒーロー -->
 <section class="hero">
-    <div class="container fade-in">
-        <div class="hero-illust">
-            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- 家のシルエット -->
-                <path d="M60 15L20 50V105H50V75H70V105H100V50L60 15Z" fill="#f5efe7" stroke="#5c4a3a" stroke-width="2.5" stroke-linejoin="round"/>
-                <path d="M60 15L20 50" stroke="#5c4a3a" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M60 15L100 50" stroke="#5c4a3a" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- 窓 -->
-                <rect x="35" y="58" width="16" height="14" rx="2" fill="#e8824a" opacity="0.3" stroke="#5c4a3a" stroke-width="1.5"/>
-                <rect x="69" y="58" width="16" height="14" rx="2" fill="#e8824a" opacity="0.3" stroke="#5c4a3a" stroke-width="1.5"/>
-                <!-- ドア -->
-                <rect x="50" y="75" width="20" height="30" rx="2" fill="#e8824a" opacity="0.2" stroke="#5c4a3a" stroke-width="1.5"/>
-                <circle cx="66" cy="92" r="2" fill="#5c4a3a"/>
-                <!-- ハートマーク -->
-                <path d="M52 35C52 30 57 28 60 32C63 28 68 30 68 35C68 42 60 48 60 48C60 48 52 42 52 35Z" fill="#e8824a" opacity="0.6"/>
-                <!-- 書類 -->
-                <rect x="85" y="8" width="28" height="35" rx="3" fill="white" stroke="#5c4a3a" stroke-width="1.5" transform="rotate(10 85 8)"/>
-                <line x1="92" y1="18" x2="108" y2="15" stroke="#9b8b7a" stroke-width="1" transform="rotate(10 92 18)"/>
-                <line x1="92" y1="24" x2="106" y2="21" stroke="#9b8b7a" stroke-width="1" transform="rotate(10 92 24)"/>
-                <line x1="92" y1="30" x2="103" y2="27" stroke="#9b8b7a" stroke-width="1" transform="rotate(10 92 30)"/>
-            </svg>
+    <div class="hero-banner fade-in">
+        <div class="hero-side">
+            <div class="il il-r1"><img src="img/documents.png" alt="書類作成"></div>
+            <div class="il il-r2"><img src="img/consultation.png" alt="相談"></div>
+            <div class="il il-r3"><img src="img/senior-couple.png" alt="シニア夫婦"></div>
+            <div class="il il-r4"><img src="img/passbook.png" alt="通帳と印鑑"></div>
         </div>
-        <h1>相続サポートセンター青森</h1>
-        <div class="brand-name">そうさぽ青森</div>
-        <p class="tagline">相続・終活のお悩み、まるごとサポート</p>
-        <a href="#contact" class="btn btn-primary">無料相談はこちら →</a>
+        <div class="hero-text">
+            <div class="org">相続サポートセンター青森</div>
+            <div class="brand"><span class="deco">～</span> そうさぽ青森 <span class="deco">～</span></div>
+            <div class="catch">相続・終活のお悩み、まるごとサポート</div>
+            <a href="#contact" class="btn btn-primary">無料相談はこちら →</a>
+        </div>
+        <div class="hero-side">
+            <div class="il il-r5"><img src="img/family.png" alt="家族"></div>
+            <div class="il il-r6"><img src="img/consult-woman.png" alt="相談する女性"></div>
+            <div class="il il-r7"><img src="img/house.png" alt="住宅"></div>
+            <div class="il il-r8"><img src="img/young-couple.png" alt="若い夫婦"></div>
+        </div>
     </div>
 </section>
 
