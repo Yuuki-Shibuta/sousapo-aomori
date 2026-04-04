@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="そうさぽ青森">
     <meta property="og:locale" content="ja_JP">
 
-    <!-- 構造化データ（Googleに事業内容を伝える） -->
+    <!-- 構造化データ：事業者情報（Googleに事業内容を伝える） -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -34,18 +34,66 @@
             "streetAddress": "長島2丁目13-1 リージャス アクア青森スクエア6階",
             "addressCountry": "JP"
         },
-        "areaServed": {
-            "@type": "City",
-            "name": "青森市"
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.8244,
+            "longitude": 140.7407
         },
-        "serviceType": ["相続手続き", "遺言書作成", "遺産分割協議書作成", "終活サポート", "生前贈与", "任意後見"],
+        "areaServed": [
+            {"@type": "City", "name": "青森市"},
+            {"@type": "State", "name": "青森県"}
+        ],
+        "serviceType": ["相続手続き", "遺言書作成", "遺産分割協議書作成", "終活サポート", "生前贈与", "任意後見", "家族信託", "認知症対策"],
         "priceRange": "初回相談無料",
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
             "opens": "10:00",
             "closes": "17:00"
-        }
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <!-- 構造化データ：よくある質問（検索結果にQ&Aが直接表示される） -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "そうさぽ青森ではどんな相談ができますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "遺言書の作成、遺産分割協議書の作成、生前贈与の手続き、認知症・介護への備え（任意後見・家族信託）、保険の見直しなど、相続・終活に関するあらゆるご相談に対応しています。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "相談は無料ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい、初回のご相談は無料です。事前予約制の個別形式で、プライバシーに配慮しておりますので安心してお話しいただけます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "どんな専門家がいますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "行政書士、宅地建物取引士、ファイナンシャルプランナー（FP）、司法書士など、終活・相続に関わる各分野の専門家が連携してサポートいたします。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "夫婦や家族と一緒に相談できますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい、ご夫婦やご家族でのご相談も大歓迎です。お気軽にお申し込みください。"
+                }
+            }
+        ]
     }
     </script>
 
